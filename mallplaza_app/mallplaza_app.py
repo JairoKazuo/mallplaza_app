@@ -11,10 +11,10 @@ from .auth.pages import(
     my_logout_page,
 )
 from .auth.state import SessionState
-from . import blog, navigation, pages, contact
+from . import empleados, blog, navigation, pages, contact, arrendamiento, inquilino, facturacion, recobro, mantenimiento, evento
 
 class State(rx.State):
-    label = "MallPlaza 8)"
+    label = "MallPlaza"
 
     def handgle_title_input_change(self, val):
         self.label=val
@@ -33,8 +33,9 @@ def index() -> rx.Component:
             #     size="5",
             # ),
             # rx.button("About us", on_click=State.did_click),
+            rx.text("Sistema de Gestión de Arrendamientos y Espacios"),
             rx.link(
-                rx.button("About us"),
+                rx.button("About us", bg="red"),
                 href=navigation.routes.ABOUT_ROUTE
             ),
             spacing="5",
@@ -105,4 +106,44 @@ app.add_page(
 )
 app.add_page(pages.pricing_page,
     route=navigation.routes.PRICING_ROUTE
+)
+
+#Módulo Empleados
+app.add_page(
+    empleados.about_empleados,
+    route=navigation.routes.EMPLEADO_ROUTE
+)
+
+#Módulo Arrendamiento
+app.add_page(
+    arrendamiento.about_arrendamiento,
+    route=navigation.routes.ARRENDAMIENTO_ROUTE
+)
+
+#Módulo de Inquilinos
+app.add_page(
+    inquilino.about_inquilino,
+    route=navigation.routes.INQUILINO_ROUTE
+)
+
+#Módulo facturación
+app.add_page(
+    facturacion.about_facturacion,
+    route=navigation.routes.FACTURACION_ROUTE
+)
+
+#Módulo Recobro
+app.add_page(
+    recobro.about_recobro,
+    route=navigation.routes.RECOBRO_ROUTE
+)
+#Módulo Evento
+app.add_page(
+    evento.about_evento,
+    route=navigation.routes.EVENTO_ROUTE
+)
+#Módulo Mantenimiento
+app.add_page(
+    mantenimiento.about_mantenimiento,
+    route=navigation.routes.MANTENIMIENTO_ROUTE
 )

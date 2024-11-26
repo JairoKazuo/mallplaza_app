@@ -22,3 +22,17 @@ class NavState(rx.State):
         return rx.redirect(routes.CONTACT_US_ROUTE)
     def to_pricing(self):
         return rx.redirect(routes.PRICING_ROUTE)
+    def to_empleado(self):
+        return rx.redirect(routes.EMPLEADO_ROUTE)
+    def to_arrendamiento(self):
+        return rx.redirect(routes.ARRENDAMIENTO_ROUTE)
+    def to_inquilino(self):
+        return rx.redirect(routes.INQUILINO_ROUTE)
+    def to_facturacion(self):
+        return rx.redirect(routes.FACTURACION_ROUTE)
+    def to_recobro(self):
+        return rx.redirect(routes.RECOBRO_ROUTE)
+    def to_evento(self):
+        return rx.redirect(routes.EVENTO_ROUTE)
+    def to_mantenimiento(self):
+        return rx.redirect(routes.MANTENIMIENTO_ROUTE)

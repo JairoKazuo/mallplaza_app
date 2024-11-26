@@ -16,7 +16,7 @@ def navbar() -> rx.Component:
                 rx.hstack(
                     rx.link(
                         rx.image(
-                            src="/logo.jpg",
+                            src="/mallplaza_icon.png",
                             width="2.25em",
                             height="auto",
                             border_radius="25%",
@@ -25,11 +25,11 @@ def navbar() -> rx.Component:
                     ),
                     rx.link(
                         rx.heading(
-                            "Reflex", size="7", weight="bold"
+                            "MallPlaza", size="7", weight="bold"
                         ),
                         href=navigation.routes.HOME_ROUTE
                     ),
-                    align_items="center",
+                    align_items="center"
                 ),
                 rx.hstack(
                     navbar_link("Home", navigation.routes.HOME_ROUTE),
@@ -61,20 +61,20 @@ def navbar() -> rx.Component:
                 ),
                 justify="between",
                 align_items="center",
-                id='my-nav-bar-hstack-desktop'
+                id='my-nav-bar-hstack-desktop',
             ),
         ),
         rx.mobile_and_tablet(
             rx.hstack(
                 rx.hstack(
                     rx.image(
-                        src="/logo.jpg",
+                        src="/mallplaza_icon.png",
                         width="2em",
                         height="auto",
                         border_radius="25%",
                     ),
                     rx.heading(
-                        "Reflex", size="6", weight="bold"
+                        "Mallplaza", size="6", weight="bold"
                     ),
                     align_items="center",
                 ),
@@ -99,8 +99,8 @@ def navbar() -> rx.Component:
                         rx.menu.item("Contact",
                             on_click=navigation.NavState.to_contact),
                         rx.menu.separator(),
-                        rx.menu.item("Log in", on_click=navigation.NavState.to_register),
-                        rx.menu.item("Sign up", on_click=navigation.NavState.to_login),
+                        rx.menu.item("Log in", on_click=navigation.NavState.to_login),
+                        rx.menu.item("Sign up", on_click=navigation.NavState.to_register),
                     ),
                     justify="end",
                 ),
@@ -108,7 +108,7 @@ def navbar() -> rx.Component:
                 align_items="center",
             ),
         ),
-        bg=rx.color("accent", 3),
+        bg=rx.color("ruby", 3),
         padding="1em",
         # position="fixed",
         # top="0px",

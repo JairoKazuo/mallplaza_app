@@ -86,12 +86,18 @@ def sidebar_item(
         width="100%",
     )
 
-
 def sidebar_items() -> rx.Component:
     return rx.vstack(
-        sidebar_item("Dashboard", "layout-dashboard", navigation.routes.HOME_ROUTE),
+        sidebar_item("Inicio", "layout-dashboard", navigation.routes.HOME_ROUTE),
         sidebar_item("Blog", "square-library", navigation.routes.BLOG_POSTS_ROUTE),
-        sidebar_item("Create post", "square-library", navigation.routes.BLOG_POST_ADD_ROUTE),
+        sidebar_item("Solicitudes", "contact", navigation.routes.CONTACT_ENTRIES_ROUTE),
+        sidebar_item("Empleados", "users", navigation.routes.EMPLEADO_ROUTE),
+        sidebar_item("Arrendamientos", "receipt-text", navigation.routes.ARRENDAMIENTO_ROUTE),
+        sidebar_item("Inquilinos", "book-user", navigation.routes.INQUILINO_ROUTE),
+        sidebar_item("Facturacion y Pagos", "hand-coins", navigation.routes.FACTURACION_ROUTE),
+        sidebar_item("Recobros", "hand-platter", navigation.routes.RECOBRO_ROUTE),
+        sidebar_item("Eventos", "calendar-check", navigation.routes.EVENTO_ROUTE),
+        sidebar_item("Mantenimiento", "hammer", navigation.routes.MANTENIMIENTO_ROUTE),
         spacing="1",
         width="100%",
     )
@@ -103,13 +109,13 @@ def sidebar() -> rx.Component:
             rx.vstack(
                 rx.hstack(
                     rx.image(
-                        src="/logo.jpg",
+                        src="/mallplaza_icon.png",
                         width="2.25em",
                         height="auto",
                         border_radius="25%",
                     ),
                     rx.heading(
-                        "Reflex", size="7", weight="bold"
+                        "Mallplaza", size="7", weight="bold"
                     ),
                     align="center",
                     justify="start",
@@ -166,7 +172,7 @@ def sidebar() -> rx.Component:
                 # z_index="5",
                 padding_x="1em",
                 padding_y="1.5em",
-                bg=rx.color("accent", 3),
+                bg=rx.color("ruby", 3),
                 align="start",
                 height="100vh",
                 #height="650px",
@@ -238,7 +244,7 @@ def sidebar() -> rx.Component:
                         height="100%",
                         width="20em",
                         padding="1.5em",
-                        bg=rx.color("accent", 2),
+                        bg=rx.color("ruby", 2),
                     ),
                     width="100%",
                 ),

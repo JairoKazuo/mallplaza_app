@@ -32,7 +32,7 @@ def my_register_form() -> rx.Component:
             input_100w("password", type="password"),
             rx.text("Confirm Password"),
             input_100w("confirm_password", type="password"),
-            rx.button("Sign up", width="100%"),
+            rx.button("Sign up", width="100%", bg="red"),
             rx.center(
                 rx.link("Login", on_click=lambda: rx.redirect(reflex_local_auth.routes.LOGIN_ROUTE)),
                 width="100%",
