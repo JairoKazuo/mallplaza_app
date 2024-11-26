@@ -3,3 +3,6 @@ assets/external/
 __pycache__/
 *.db
 *.py[cod]
+alembic/
+alembic.ini
+.venv/

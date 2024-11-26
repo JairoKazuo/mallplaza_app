@@ -1,5 +1,6 @@
 import reflex as rx
 
 config = rx.Config(
-    app_name="curso_full_stack_python",
+    app_name="mallplaza_app",
+    db_url="postgresql://postgres:1336C@localhost:5432/reflex_db",
 )
